@@ -3,7 +3,7 @@ Descripción: Calculadora básica con operaciones de suma, resta,
              multiplicación y división. Incluye menú con opción salir.
 Autor: Joshua David Ortiz Rosas
 Fecha de creación: 21/08/2025
-Fecha última modificación: 21/08/2025
+Fecha última modificación: 23/08/2025
 */
 
 fun main() {
@@ -62,4 +62,5 @@ fun suma(a: Double, b: Double) = a + b
 fun resta(a: Double, b: Double) = a - b
 fun multiplicacion(a: Double, b: Double) = a * b
 fun division(a: Double, b: Double) = a / b
+
 
