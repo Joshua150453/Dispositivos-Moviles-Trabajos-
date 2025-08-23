@@ -3,7 +3,7 @@ Descripción: Juego de Piedra, Papel o Tijera contra la computadora,
              la cual elige su jugada de manera aleatoria.
 Autor: Joshua David Ortiz Rosas
 Fecha de creación: 21/08/2025
-Fecha última modificación: 21/08/2025
+Fecha última modificación: 23/08/2025
 */
 
 // Importamos la librería de Kotlin que permite generar números aleatorios
@@ -56,4 +56,5 @@ fun ganador(usuario: String, computadora: String): String {
         "Perdiste"
     }
 }
+
 
