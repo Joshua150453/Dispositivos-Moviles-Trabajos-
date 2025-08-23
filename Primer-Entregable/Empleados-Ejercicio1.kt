@@ -3,7 +3,7 @@ Descripción: Programa que calcula el nivel de rendimiento y la cantidad de dine
              según el salario y la puntuación de un empleado.
 Autor: Joshua David Ortiz Rosas
 Fecha de creación: 21/08/2025
-Fecha última modificación: 21/08/2025
+Fecha última modificación: 22/08/2025
 */
 
 fun main() {
@@ -39,3 +39,4 @@ fun calcularDinero(salario: Double, puntuacion: Int): Double {
         salario * (puntuacion.toDouble() / 10)
     } else 0.0
 }
+
