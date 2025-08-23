@@ -3,7 +3,7 @@ Descripción: Juego en el que el usuario debe adivinar un número aleatorio
              entre 1 y 30 en un máximo de 5 intentos, con pistas de mayor o menor.
 Autor: Joshua David Ortiz Rosas
 Fecha de creación: 21/08/2025
-Fecha última modificación: 22/08/2025
+Fecha última modificación: 23/08/2025
 */
 
 // Importamos la librería de Kotlin que permite generar números aleatorios
@@ -39,6 +39,7 @@ fun main() {
     // Si se gastaron los 5 intentos, se revela el número secreto
     println("Fallaste. El número era $numeroSecreto.")
 }
+
 
 
 
