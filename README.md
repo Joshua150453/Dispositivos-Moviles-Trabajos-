@@ -64,7 +64,8 @@
 | ------------- | ------------- | ------------- |
 | 1  | 6af23b0 | Creación de la primera carpeta de entregables |
 | 2  | 8c61ca5 | Subiendo las carpetas completas |
-| 3  | b8de9ba | Trabajos a entregar realizados en Kotlin |
+| 3  | b8de9ba | Trabajos a entregar realizados en Kotlin | 
+| 4  | d2aae9f | README del primer trabajo |
 
 ## Github
 Los ejercicios se encuentran en la carpeta Primer-Entregable, cada uno ubicado en su respectiva carpeta ademas de externamente por si se desea verlos mas rapido, dentro de sus respectivas carpetas (Ejercicio #) en la carpeta src como se presento en clase se encuentra el codigo a compilar.
