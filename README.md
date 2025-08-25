@@ -66,6 +66,12 @@
 | 2  | 8c61ca5 | Subiendo las carpetas completas |
 | 3  | b8de9ba | Trabajos a entregar realizados en Kotlin | 
 | 4  | d2aae9f | README del primer trabajo |
+| 5  | a591be5 | Arreglando fecha Adinina Numero.kt |
+| 6  | f2d8e34 | Arreglando fecha Empleados-Ejercicio1.kt |
+| 7  | c9ff418 | Modificando Codigo Calculadora Elemental.kt |
+| 8  | 615faab | Arreglando error tipogracgico Piedra,Papel,Tijera.kt |
+| 9  | 6af23b0 | README INICIALP ARA AÑADIR DESCRIPCIONES IMPORTANTES |
+| 10  | 822db10 | Correccion del README |
 
 ## Github
 Los ejercicios se encuentran en la carpeta Primer-Entregable, cada uno ubicado en su respectiva carpeta ademas de externamente por si se desea verlos mas rapido, dentro de sus respectivas carpetas (Ejercicio #) en la carpeta src como se presento en clase se encuentra el codigo a compilar.
