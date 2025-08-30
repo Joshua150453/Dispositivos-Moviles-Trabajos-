@@ -9,7 +9,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr><td colspan="3"><span style="font-weight:bold;">Formato</span>: Trabajo 1</td></tr>
+        <tr><td colspan="3"><span style="font-weight:bold;">Formato</span>: Trabajo 2</td></tr>
     </tbody>
 </table>
 
@@ -59,7 +59,7 @@
 </div>
 
 ## Codigos:
-### Clase para Cuenta Bancaria:
+### 1. Clase para Cuenta Bancaria:
 Este código implementa una clase CuentaBancaria en Kotlin que modela una cuenta con saldo y límite de retiro.
   - Se valida que el saldo inicial no sea negativo y que el límite de retiro sea mayor que cero.
   - Tiene propiedades con getters y setters que permiten leer y modificar el saldo y el límite, validando siempre los datos.
@@ -86,7 +86,7 @@ Retiro exitoso. Saldo restante: 650.0
 
 🔗 [Ejercicio desarrollado](https://github.com/Joshua150453/Dispositivos-Moviles-Trabajos-/blob/main/Segundo-Entregable/Clase%20para%20Cuenta%20Bancaria.kt)
 
-### Clase para Producto:
+### 2. Clase para Producto:
 Este proyecto implementa una **clase Producto** que representa un artículo con un **precio** y un **descuento aplicable**.  
 El objetivo es demostrar el uso de **encapsulación, validación de datos y getters/setters** en Kotlin.
 
@@ -121,7 +121,7 @@ Precio final con descuento: 170.0
 ```
 🔗 [Ejercicio desarrollado](https://github.com/Joshua150453/Dispositivos-Moviles-Trabajos-/blob/main/Segundo-Entregable/Clase%20para%20Producto.kt)
 
-### Figuras:
+### 3. Figuras:
 Ejemplo de herencia y polimorfismo con una clase abstracta `Figura` y subclases `Circulo`, `Rectangulo` y `Triangulo`.  
 Cada figura implementa su propio cálculo de área.  
 
@@ -154,7 +154,7 @@ Perímetro: 15.707963267948966
 ```
 🔗 [Ejercicio desarrollado](https://github.com/Joshua150453/Dispositivos-Moviles-Trabajos-/blob/main/Segundo-Entregable/Figuras.kt)
 
-###  Gestion de Biblioteca:
+### 4. Gestion de Biblioteca:
 Proyecto en Kotlin que simula una biblioteca con materiales, usuarios y préstamos.  
 Se implementa herencia, interfaces, clases abstractas y uso de colecciones.  
 
