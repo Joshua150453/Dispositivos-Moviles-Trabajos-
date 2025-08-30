@@ -57,3 +57,31 @@
         </tbody>
     </table>
 </div>
+
+## Codigos:
+### Clase para Cuenta Bancaria:
+Este código implementa una clase CuentaBancaria en Kotlin que modela una cuenta con saldo y límite de retiro.
+  - Se valida que el saldo inicial no sea negativo y que el límite de retiro sea mayor que cero.
+  - Tiene propiedades con getters y setters que permiten leer y modificar el saldo y el límite, validando siempre los datos.
+  - El método retirar(monto) controla que el retiro no exceda el saldo disponible ni el límite permitido, y actualiza el saldo si la operación es válida.
+
+En el main, el programa:
+  -Solicita al usuario el saldo inicial y el límite de retiro.
+  -Crea una cuenta con esos valores.
+  -Pide dos montos a retirar y ejecuta la operación mostrando mensajes de éxito o error según las condiciones.
+
+En resumen: es un pequeño sistema interactivo que permite crear una cuenta bancaria, validar sus datos y realizar retiros con restricciones.
+
+**Ejemplo de uso:**  
+
+```bash
+Ingrese saldo inicial: 800
+Ingrese límite de retiro: 300
+Ingrese monto a retirar: 350
+No puedes retirar más del límite permitido.
+
+Ingrese monto a retirar: 150
+Retiro exitoso. Saldo restante: 650.0
+```
+
+🔗 [Ejercicio desarrollado](Segundo-Entregable/Clase para Cuenta Bancaria.kt)
