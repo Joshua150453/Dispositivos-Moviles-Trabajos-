@@ -84,4 +84,4 @@ Ingrese monto a retirar: 150
 Retiro exitoso. Saldo restante: 650.0
 ```
 
-🔗 [Ejercicio desarrollado](Segundo-Entregable/Clase para Cuenta Bancaria.kt)
+🔗 [Ejercicio desarrollado](https://github.com/Joshua150453/Dispositivos-Moviles-Trabajos-/blob/main/Segundo-Entregable/Clase%20para%20Cuenta%20Bancaria.kt)
