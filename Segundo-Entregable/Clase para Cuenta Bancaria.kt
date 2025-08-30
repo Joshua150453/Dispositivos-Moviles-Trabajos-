@@ -8,6 +8,16 @@ package `Practica 2 - Programacion Orientada a Objetos Kotlin`
     Ultima modificacion: 29/08/2025
 */
 
+/*
+Este código implementa una clase CuentaBancaria en Kotlin que modela una cuenta con saldo y límite de retiro.
+  - Se valida que el saldo inicial no sea negativo y que el límite de retiro sea mayor que cero.
+  - Tiene propiedades con getters y setters que permiten leer y modificar el saldo y el límite, validando siempre los datos.
+  - El método retirar(monto) controla que el retiro no exceda el saldo disponible ni el límite permitido, y actualiza el saldo si la operación es válida.
+  -Solicita al usuario el saldo inicial y el límite de retiro.
+  -Crea una cuenta con esos valores.
+  -Pide dos montos a retirar y ejecuta la operación mostrando mensajes de éxito o error según las condiciones.
+*/
+
 // Clase que modela una cuenta bancaria simple
 class CuentaBancaria(
     private var saldo: Double,        // Saldo actual de la cuenta
@@ -72,5 +82,6 @@ fun main() {
     val monto2 = readLine()!!.toDouble()
     cuenta.retirar(monto2)
 }
+
 
 
