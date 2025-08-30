@@ -1,11 +1,11 @@
 package `Practica 2 - Programacion Orientada a Objetos Kotlin`
 
 /*
-    Autor: Joshua david Ortiz Rosas
+    Autor: Joshua David Ortiz Rosas
     Curso: Programacion De Dispositivos Moviles
     Semestre: VI
     Fecha: 28/08/2025
-    Ultima modificacion: 30/03/2025
+    Ultima modificacion: 29/08/2025 
 */
 
 /*
