@@ -29,7 +29,7 @@
                         <tr><td>ASIGNATURA:</td><td>Programción para Dispositivos Moviles</td></tr>
                         <tr><td>TÍTULO DEL TRABAJO:</td><td> Introducción a Kotlin</td></tr>
                         <tr>
-                            <td>NÚMERO DEL TRABAJO:</td><td>01</td>
+                            <td>NÚMERO DEL TRABAJO:</td><td>02</td>
                             <td>AÑO:</td><td>2025</td>
                             <td>NRO. SEMESTRE:</td><td>VI</td>
                         </tr>
