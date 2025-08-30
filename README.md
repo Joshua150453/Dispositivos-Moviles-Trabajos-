@@ -29,7 +29,7 @@
                         <tr><td>ASIGNATURA:</td><td>Programción para Dispositivos Moviles</td></tr>
                         <tr><td>TÍTULO DEL TRABAJO:</td><td> Introducción a Kotlin</td></tr>
                         <tr>
-                            <td>NÚMERO DEL TRABAJO:</td><td>01</td>
+                            <td>NÚMERO DEL TRABAJO:</td><td>02</td>
                             <td>AÑO:</td><td>2025</td>
                             <td>NRO. SEMESTRE:</td><td>VI</td>
                         </tr>
@@ -58,94 +58,137 @@
     </table>
 </div>
 
-## **Tablero de Commits**
+## Codigos:
+### Clase para Cuenta Bancaria:
+Este código implementa una clase CuentaBancaria en Kotlin que modela una cuenta con saldo y límite de retiro.
+  - Se valida que el saldo inicial no sea negativo y que el límite de retiro sea mayor que cero.
+  - Tiene propiedades con getters y setters que permiten leer y modificar el saldo y el límite, validando siempre los datos.
+  - El método retirar(monto) controla que el retiro no exceda el saldo disponible ni el límite permitido, y actualiza el saldo si la operación es válida.
 
-| Nro. |Código |Commits |
-| ------------- | ------------- | ------------- |
-| 1  | 6af23b0 | Creación de la primera carpeta de entregables |
-| 2  | 8c61ca5 | Subiendo las carpetas completas |
-| 3  | b8de9ba | Trabajos a entregar realizados en Kotlin | 
-| 4  | d2aae9f | README del primer trabajo |
-| 5  | a591be5 | Arreglando fecha Adinina Numero.kt |
-| 6  | f2d8e34 | Arreglando fecha Empleados-Ejercicio1.kt |
-| 7  | c9ff418 | Modificando Codigo Calculadora Elemental.kt |
-| 8  | 615faab | Arreglando error tipogracgico Piedra,Papel,Tijera.kt |
-| 9  | 6af23b0 | README INICIALP ARA AÑADIR DESCRIPCIONES IMPORTANTES |
-| 10  | 822db10 | Correccion del README |
+**En el main, el programa:**
+  -Solicita al usuario el saldo inicial y el límite de retiro.
+  -Crea una cuenta con esos valores.
+  -Pide dos montos a retirar y ejecuta la operación mostrando mensajes de éxito o error según las condiciones.
 
-## Github
-Los ejercicios se encuentran en la carpeta Primer-Entregable, cada uno ubicado en su respectiva carpeta ademas de externamente por si se desea verlos mas rapido, dentro de sus respectivas carpetas (Ejercicio #) en la carpeta src como se presento en clase se encuentra el codigo a compilar.
+En resumen: es un pequeño sistema interactivo que permite crear una cuenta bancaria, validar sus datos y realizar retiros con restricciones.
 
-### Ejercico 1:
-El programa pide al usuario su salario mensual y su puntuación de rendimiento (entre 0 y 10).
-Con esos datos:
-- Clasifica el nivel de rendimiento (Inaceptable, Aceptable o Meritorio).
-- Calcula cuánto dinero recibe el empleado en base a su salario y la puntuación.
-Finalmente, muestra en pantalla ambos resultados.
-#### Proceso:
-Se pide al usuario:
-- Salario → Convertido a Double porque puede tener decimales.
-- Puntuación → Convertido a Int porque es un número entero entre 0 y 10.
+**Ejemplo de uso:**  
 
-Se llaman dos funciones:
-- obtenerNivel(puntuacion) → Devuelve un texto con el nivel de rendimiento.
-- calcularDinero(salario, puntuacion) → Calcula la cantidad de dinero a recibir.
+```bash
+Ingrese saldo inicial: 800
+Ingrese límite de retiro: 300
+Ingrese monto a retirar: 350
+No puedes retirar más del límite permitido.
 
-Muestra el nivel y el dinero en pantalla, con el dinero formateado a dos decimales.
+Ingrese monto a retirar: 150
+Retiro exitoso. Saldo restante: 650.0
+```
 
-Clasifica la puntuación:
-- 0..3 → Inaceptable.
-- 4..6 → Aceptable.
-- 7..10 → Meritorio.
-Cualquier otro valor → "Puntuación inválida".
+🔗 [Ejercicio desarrollado](https://github.com/Joshua150453/Dispositivos-Moviles-Trabajos-/blob/main/Segundo-Entregable/Clase%20para%20Cuenta%20Bancaria.kt)
 
-Calcula el dinero recibido:
-- Convierte la puntuación a un porcentaje sobre 10.
-- Multiplica el salario por ese porcentaje.
-- Si la puntuación no es válida, devuelve 0.0.
+### Clase para Producto:
+Este proyecto implementa una **clase Producto** que representa un artículo con un **precio** y un **descuento aplicable**.  
+El objetivo es demostrar el uso de **encapsulación, validación de datos y getters/setters** en Kotlin.
 
-Este programa es una mini-calculadora de rendimiento que:
--- Lee el salario y la puntuación.
--- Clasifica al empleado según su nivel de rendimiento.
--- Calcula cuánto dinero recibe en función de su desempeño.
+---
 
-### Ejercicio 2:
-Este programa implementa el clásico juego de Piedra, Papel o Tijera entre el usuario y la computadora.
-La computadora selecciona una opción al azar, mientras que el usuario ingresa la suya desde el teclado.
-Luego, el sistema compara ambas elecciones y determina el resultado: empate, victoria o derrota.
-#### Proceso:
-- Se importa Random para generar la elección de la computadora.
-- En main el usuario y la computadora eligen, luego se muestra el resultado.
-- eleccionComputadora() devuelve "Piedra", "Papel" o "Tijera" al azar.
-- eleccionUsuario() pide la jugada, la normaliza y valida hasta que sea correcta.
-- ganador() compara ambas elecciones y devuelve "Empate", "¡Ganaste!" o "Perdiste".
+#### Funcionalidad
 
-### Ejercicio 3:
-Este programa es una calculadora básica en Kotlin que permite realizar operaciones matemáticas como suma, resta, multiplicación y división. Funciona mediante un menú interactivo que se repite hasta que el usuario decide salir.
-#### Proceso:
-- El programa muestra un menú con opciones del 1 al 5.
-- Si el usuario elige una operación (1 a 4), se piden dos números para calcular.
-- Dependiendo de la opción:
-   - suma() → suma los dos números.
-   - resta() → resta el segundo al primero.
-   - multiplicacion() → multiplica ambos valores.
-   - division() → divide, validando que el divisor no sea cero.
-   - Si el usuario escribe un número distinto de 1–5, aparece un mensaje de error.
-   - El menú se repite en un bucle do…while hasta que el usuario elige la opción 5 (Salir).
--Al final, se muestra el mensaje "Saliendo de la calculadora...".
+- **Atributos principales:**
+  - `precio`: Representa el precio base del producto.
+  - `descuento`: Porcentaje de descuento aplicado (0% - 100%).
 
-### Ejercicio 4:
-Este programa consiste en un juego simple donde el sistema genera un número aleatorio entre 1 y 30. El jugador tiene un máximo de 5 intentos para adivinar el número secreto. Después de cada intento, el programa da una pista indicando si el número ingresado es mayor o menor que el número secreto. Si el jugador acierta, gana inmediatamente; si no, al final se revela el número correcto.
-#### Proceso:
-- Importación: Se importa kotlin.random.Random para poder generar un número aleatorio.
-- Número secreto: Se genera un número aleatorio entre 1 y 30 que el jugador debe adivinar.
-- Intentos: Se le dan 5 oportunidades al jugador para adivinar el número.
-- Entrada del usuario: Con readLine()!!.toInt() el programa lee lo que el usuario escribe y lo convierte en número entero.
-   - Comparaciones:
-     - Si el número ingresado es igual al secreto → gana y el programa termina.
-     - Si es menor → el programa avisa que el secreto es mayor.
-     - Si es mayor → el programa avisa que el secreto es menor.
-- Final: Si no acierta en 5 intentos, el programa revela el número secreto.
+- **Validaciones:**
+  - El precio debe ser mayor a `0`. Si no, se ajusta a `1`.
+  - El descuento debe estar en el rango `0` a `100`. Si no, se ajusta a `0`.
 
+- **Métodos principales:**
+  - `setPrecio(nuevoPrecio: Int)`: Cambia el precio con validación.
+  - `getPrecio(): Int`: Devuelve el precio actual.
+  - `setDescuento(nuevoDescuento: Int)`: Cambia el descuento con validación.
+  - `getDescuento(): Int`: Devuelve el descuento actual.
+  - `calcularPrecioFinal(): Double`: Calcula el precio después del descuento.
+  - `imprimirInformacion()`: Muestra en consola todos los datos del producto.
 
+**Ejemplo de uso:**  
 
+```bash
+Descuento inválido. Debe estar entre 0 y 100.
+Información del producto:
+Precio actual: 200.0
+Descuento aplicado: 15%
+Precio final con descuento: 170.0
+```
+🔗 [Ejercicio desarrollado](https://github.com/Joshua150453/Dispositivos-Moviles-Trabajos-/blob/main/Segundo-Entregable/Clase%20para%20Producto.kt)
+
+### Figuras:
+Ejemplo de herencia y polimorfismo con una clase abstracta `Figura` y subclases `Circulo`, `Rectangulo` y `Triangulo`.  
+Cada figura implementa su propio cálculo de área.  
+
+#### Funcionalidad  
+- Clase abstracta `Figura` con método `area()`.  
+- Subclases implementan el cálculo específico.  
+- Uso de polimorfismo en `main()`.
+
+**Ejemplo de uso:**  
+
+```bash
+Atributos del Cuadrado:
+Lado: 4
+Resultados del Cuadrado
+Área: 16.0
+Perímetro: 16.0
+
+Atributos del Rectángulo:
+Base: 5
+Altura: 3
+Resultados del Rectángulo
+Área: 15.0
+Perímetro: 16.0
+
+Atributos del Círculo:
+Radio: 2.5
+Resultados del Círculo
+Área: 19.634954084936208
+Perímetro: 15.707963267948966
+```
+🔗 [Ejercicio desarrollado](https://github.com/Joshua150453/Dispositivos-Moviles-Trabajos-/blob/main/Segundo-Entregable/Figuras.kt)
+
+###  Gestion de Biblioteca:
+Proyecto en Kotlin que simula una biblioteca con materiales, usuarios y préstamos.  
+Se implementa herencia, interfaces, clases abstractas y uso de colecciones.  
+
+#### Estructura  
+- **Material (abstracta):** Clase base con `titulo`, `autor`, `anioPublicacion`.  
+- **Libro / Revista:** Subclases con atributos y `mostrarDetalles()`.  
+- **Usuario:** Data class con `nombre`, `apellido`, `edad`.  
+- **IBiblioteca:** Interfaz con métodos para registrar, prestar y devolver materiales.  
+- **Biblioteca:** Implementa `IBiblioteca`, gestiona materiales y préstamos con `List` y `Map`.  
+
+#### Funcionalidad  
+- Registrar materiales y usuarios.  
+- Prestar y devolver libros o revistas.  
+- Mostrar materiales disponibles y reservados por usuario.
+
+**Ejemplo de uso:**  
+
+```bash
+Material registrado: 1984
+Material registrado: National Geographic
+Usuario registrado: Carlos Gómez
+Materiales disponibles:
+Libro: 1984, Autor: George Orwell, Año: 1949, Género: Distopía, Páginas: 328
+Revista: National Geographic, Autor: Varios, Año: 2024, ISSN: 1234-5678, Volumen: 102, Número: 5, Editorial: NatGeo Publishing
+Material prestado: 1984 a Carlos Gómez
+Materiales disponibles:
+Revista: National Geographic, Autor: Varios, Año: 2024, ISSN: 1234-5678, Volumen: 102, Número: 5, Editorial: NatGeo Publishing
+Materiales reservados por Carlos Gómez:
+Libro: 1984, Autor: George Orwell, Año: 1949, Género: Distopía, Páginas: 328
+Material devuelto: 1984 por Carlos Gómez
+Materiales disponibles:
+Revista: National Geographic, Autor: Varios, Año: 2024, ISSN: 1234-5678, Volumen: 102, Número: 5, Editorial: NatGeo Publishing
+Libro: 1984, Autor: George Orwell, Año: 1949, Género: Distopía, Páginas: 328
+Materiales reservados por Carlos Gómez:
+No tiene materiales en préstamo.
+```
+🔗 [Ejercicio desarrollado](https://github.com/Joshua150453/Dispositivos-Moviles-Trabajos-/blob/main/Segundo-Entregable/Sistema%20de%20Gesti%C3%B3n%20de%20Biblioteca.kt)
