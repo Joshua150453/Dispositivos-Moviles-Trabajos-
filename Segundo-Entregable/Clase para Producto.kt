@@ -5,7 +5,7 @@ package `Practica 2 - Programacion Orientada a Objetos Kotlin`
     Curso: Programacion De Dispositivos Moviles
     Semestre: VI
     Fecha: 28/08/2025
-    Ultima modificacion: 29/03/2025
+    Ultima modificacion: 29/09/2025
 */
 
 /*
@@ -96,3 +96,4 @@ fun main() {
     producto.imprimirInformacion()
 
 }
+
