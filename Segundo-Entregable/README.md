@@ -58,6 +58,27 @@
     </table>
 </div>
 
+## **Tablero de Commits Importantes**
+
+| Nro. |Código |Commits |
+| ------------- | ------------- | ------------- |
+| 1  | 73e8e41 | Creando carpeta y README del segundo entregable |
+| 2  | 8c56274 | Subiendo codigo Clase para Cuenta Bancaria |
+| 3  | e748da9 | Subiendo codigo Clase para Producto |
+| 4  | cbdbe61 | Subiendo el codigo de Figuras |
+| 5  | eaf0bb3 | Subiendo Sistema de Gestion Biblioteca |
+| 6  | a8e3e26 | Arreglndo codigo Sistema de Gestión de Biblioteca.kt |
+| 7  | b504e0e | Creando bade inicial del README |
+| 8  | bc18ce3| Primer avance del README |
+| 9  | b60ffb7 | Modificando readme de segundo entregable |
+| 10  | ff8bf8c | Arreglando codigo de Cuenta Bancaria.kt |
+| 11  | e3cc0a4 | Solucionando funcion main de Producto.kt |
+| 12  | 36c7366 | Agregando decripicion Figuras.kt |
+| 13  | b01d6c1 | Modificando funcion main Producto.kt |
+| 14  | 401ee97 | Arreglando readme |
+| 15  | df16a2a | Culminando README.md |
+| 16  | 48ec78f | Mejorando subtitulos README.md |
+
 ## Codigos:
 ### 1. Clase para Cuenta Bancaria:
 Este código implementa una clase CuentaBancaria en Kotlin que modela una cuenta con saldo y límite de retiro.
