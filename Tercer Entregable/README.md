@@ -68,6 +68,7 @@
 | 4  | ce7dcef | Colocando los datos explicativos al readme |
 | 5  | 248cd2c | Arreglando readme |
 | 6  | a92f2e7 | Solucionando falla del README.md |
+| 7  | ef8113a | Creando tablero de commits |
 
 ## Codigos:
 ### 1. Interacción con Imágenes:
@@ -121,5 +122,3 @@ La aplicación permite reproducir un archivo de audio local almacenado en la car
 🔗 [MainActivity.kt](https://github.com/Joshua150453/Dispositivos-Moviles-Trabajos-/blob/main/Tercer%20Entregable/Ejecicio_2/app/src/main/java/com/example/musicplayer/MainActivity.kt)
 🔗 [activity_main.xml](https://github.com/Joshua150453/Dispositivos-Moviles-Trabajos-/blob/main/Tercer%20Entregable/Ejecicio_2/app/src/main/res/layout/activity_main.xml)
 🔗 [mimusica.mp3](https://github.com/Joshua150453/Dispositivos-Moviles-Trabajos-/blob/main/Tercer%20Entregable/Ejecicio_2/app/src/main/res/raw/mimusica.mp3)
-
-
