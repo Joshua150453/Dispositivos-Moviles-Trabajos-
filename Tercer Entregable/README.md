@@ -9,7 +9,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr><td colspan="3"><span style="font-weight:bold;">Formato</span>: Trabajo 2</td></tr>
+        <tr><td colspan="3"><span style="font-weight:bold;">Formato</span>: Trabajo 3</td></tr>
     </tbody>
 </table>
 
