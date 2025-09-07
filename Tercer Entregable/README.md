@@ -58,6 +58,17 @@
     </table>
 </div>
 
+## **Tablero de Commits Importantes**
+
+| Nro. |Código |Commits |
+| ------------- | ------------- | ------------- |
+| 1  | eb2df26 | Creando Carpeta Tercer Entregable |
+| 2  | 8fda66a | Subiendo El ejercicio Interacción con Imágenes |
+| 3  | 372bb79 | Subiendo el Ejercicio 2 del Reproductor |
+| 4  | ce7dcef | Colocando los datos explicativos al readme |
+| 5  | 248cd2c | Arreglando readme |
+| 6  | a92f2e7 | Solucionando falla del README.md |
+
 ## Codigos:
 ### 1. Interacción con Imágenes:
 Instrucciones:
