@@ -70,6 +70,8 @@
 | 6  | a92f2e7 | Solucionando falla del README.md |
 | 7  | ef8113a | Creando tablero de commits |
 
+Trabajo ubicado en Tercer - Entregable
+
 ## Codigos:
 ### 1. Interacción con Imágenes:
 Instrucciones:
