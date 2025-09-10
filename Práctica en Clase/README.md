@@ -100,7 +100,7 @@ Se creó un layout con un `TextView` para mostrar el contador y un
 </LinearLayout>
 ```
 
-Link 🔗 [MainActivity.kt](https://github.com/Joshua150453/Dispositivos-Moviles-Trabajos-/blob/main/Pr%C3%A1ctica%20en%20Clase/CicloDeVidaApp/app/src/main/java/com/example/ciclodevidaapp/MainActivity.kt)
+Link 🔗 [activity_main.xml](https://github.com/Joshua150453/Dispositivos-Moviles-Trabajos-/blob/main/Pr%C3%A1ctica%20en%20Clase/CicloDeVidaApp/app/src/main/res/layout/activity_main.xml)
 
 ------------------------------------------------------------------------
 
@@ -198,7 +198,7 @@ class MainActivity : AppCompatActivity() {
 }
 ```
 
-Link 🔗 [activity_main.xml](https://github.com/Joshua150453/Dispositivos-Moviles-Trabajos-/blob/main/Pr%C3%A1ctica%20en%20Clase/CicloDeVidaApp/app/src/main/res/layout/activity_main.xml)
+Link 🔗 [MainActivity.kt](https://github.com/Joshua150453/Dispositivos-Moviles-Trabajos-/blob/main/Pr%C3%A1ctica%20en%20Clase/CicloDeVidaApp/app/src/main/java/com/example/ciclodevidaapp/MainActivity.kt)
 
 ------------------------------------------------------------------------
 
