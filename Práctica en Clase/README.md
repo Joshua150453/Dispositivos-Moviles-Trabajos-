@@ -65,6 +65,8 @@
 El objetivo de esta práctica fue **comprender y evidenciar el ciclo de vida de una Activity en Android**, utilizando métodos como `onCreate`, `onStart`, `onResume`, `onPause`, `onStop`, `onDestroy` y `onSaveInstanceState`.\ 
 Además, se implementó un **contador que persiste su valor al rotar la pantalla** gracias al uso de `onSaveInstanceState`.
 
+Link 🔗 [Práctica en Clase](https://github.com/Joshua150453/Dispositivos-Moviles-Trabajos-/tree/main/Pr%C3%A1ctica%20en%20Clase)
+
 ------------------------------------------------------------------------
 
 ## 🛠️ Resolución y Código Implementado
