@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">PerfilApp</string>
+    <string name="nombre_hint">Nombre</string>
+    <string name="edad_hint">Edad</string>
+    <string name="ciudad_hint">Ciudad</string>
+    <string name="correo_hint">Correo electrónico</string>
+    <string name="continuar">Continuar</string>
+    <string name="confirmar">Confirmar</string>
+    <string name="volver_editar">Volver a editar</string>
+    <string name="perfil_guardado">Perfil guardado correctamente</string>
+</resources>
