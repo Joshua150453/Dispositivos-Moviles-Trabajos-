@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Descripción: Layout de la actividad EditorActivity con un campo de texto y un botón.
+  Autor: [Joshua David Ortiz Rosas]
+  Fecha creación: 20/09/2025
+  Última modificación: 23/09/2025
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <!-- Campo de texto donde el usuario escribe su nota -->
+    <EditText
+        android:id="@+id/editTextNota"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Escribe tu nota aquí"
+        android:minHeight="100dp"
+        android:gravity="top"
+        android:inputType="textMultiLine" />
+
+    <!-- Botón para enviar la nota a OpcionesActivity -->
+    <Button
+        android:id="@+id/btnCompartir"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Compartir"
+        android:layout_marginTop="20dp" />
+
+</LinearLayout>

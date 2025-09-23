@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.editorapp">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="EditorApp"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+        <!-- OpcionesActivity: no es launcher ni necesita ser visible a otras apps -->
+        <activity
+            android:name="com.example.editorapp.OpcionesActivity"
+            android:exported="false" />
+
+        <!-- EditorActivity: es la actividad principal (launcher), debe ser exported=true -->
+        <activity
+            android:name="com.example.editorapp.EditorActivity"
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+    </application>
+</manifest>

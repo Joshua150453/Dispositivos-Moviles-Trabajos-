@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Descripción: Layout de la actividad OpcionesActivity con el texto recibido y dos botones.
+  Autor: [Joshua David Ortiz Rosas]
+  Fecha creación: 20/09/2025
+  Última modificación: 23/09/2025
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <!-- Muestra la nota recibida desde EditorActivity -->
+    <TextView
+        android:id="@+id/txtNotaRecibida"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Aquí aparecerá la nota"
+        android:textSize="18sp"
+        android:padding="10dp" />
+
+    <!-- Botón para simular compartir por correo -->
+    <Button
+        android:id="@+id/btnCorreo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Compartir por correo"
+        android:layout_marginTop="20dp" />
+
+    <!-- Botón para regresar la nota a EditorActivity -->
+    <Button
+        android:id="@+id/btnEditar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Editar de nuevo"
+        android:layout_marginTop="10dp" />
+
+</LinearLayout>
