@@ -4,8 +4,8 @@ package com.example.configuradordepedidosdecomida
     Autor: Joshua David Ortiz Rosas
     Curso: Programacion De Dispositivos Moviles
     Semestre: VI
-    Fecha: 29/09/2025
-    Ultima modificacion: 29/09/2025 11:17 am
+    Fecha: 26/09/2025
+    Ultima modificacion: 30/09/2025 
 */
 
 /*
