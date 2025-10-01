@@ -9,7 +9,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr><td colspan="3"><span style="font-weight:bold;">Formato</span>: Trabajo Práctica 5</td></tr>
+        <tr><td colspan="3"><span style="font-weight:bold;">Formato</span>: Trabajo Práctica 6</td></tr>
     </tbody>
 </table>
 
@@ -27,9 +27,9 @@
                 <td colspan="2">
                     <table>
                         <tr><td>ASIGNATURA:</td><td>Programción para Dispositivos Moviles</td></tr>
-                        <tr><td>TÍTULO DEL TRABAJO:</td><td> Fragments y Navegación</td></tr>
+                        <tr><td>TÍTULO DEL TRABAJO:</td><td> Clase_RecyclerView</td></tr>
                         <tr>
-                            <td>NÚMERO DEL TRABAJO:</td><td>05 - Práctica</td>
+                            <td>NÚMERO DEL TRABAJO:</td><td>06 - Práctica Clase</td>
                             <td>AÑO:</td><td>2025</td>
                             <td>NRO. SEMESTRE:</td><td>VI</td>
                         </tr>
@@ -58,38 +58,80 @@
     </table>
 </div>
 
-## Ejercicios  
+# Práctica Guiada: RecyclerView con Edición y Long Click
 
-### 1️⃣ Configurador de pedidos de comida
+## Introducción teórica
+El **RecyclerView** es un componente avanzado que permite mostrar listas de datos de manera eficiente.  
+Cada elemento se representa mediante un **ViewHolder**, y el **Adapter** se encarga de enlazar los datos con las vistas.
 
-📌 **Instrucciones:**
+---
 
-Permitir al usuario armar un pedido paso a paso y visualizarlo al final.
+## Introducción a los diálogos en Android
+En Android, un **diálogo** es una ventana emergente que aparece sobre la pantalla actual.  
+Se usa para mostrar mensajes importantes o pedir información sin cambiar de actividad.
+
+El más común es el **AlertDialog**, que puede mostrar:
+- Un título  
+- Un mensaje o layout personalizado  
+- Botones como *Aceptar* y *Cancelar*
+
+## 🔗 Relación con RecyclerView
+
+Al hacer long click en un elemento, se puede mostrar un menú de acciones (Editar o Eliminar).
+
+Para editar un usuario, usamos un AlertDialog con layout personalizado que contiene los campos Nombre, Edad y Correo.
+
+## 📝 Paso 1: Ver videos de referencia
+
+  - RecyclerView básico
+  
+  - Long click en RecyclerView
+  
+  - AlertDialog en Android
+
+## 📝 Paso 2: Código base del proyecto
+
+  - El profesor entregará un proyecto con:
+  
+  - Una lista de usuarios mostrada en un RecyclerView.
+  
+  - Funcionalidad de agregar y eliminar usuarios ya implementada.
+  
+  - Un UsuarioAdapter y un UsuarioViewHolder básicos.
+
+## 📝 Paso 3: Implementar long click
+
+Agrega un setOnLongClickListener al UsuarioViewHolder para abrir un menú con opciones:
 
 
-La aplicación debe tener:
+## 📝 Paso 4: Editar un usuario
+  - 📌 Layout personalizado dialog_edit_usuario.xml
+  
+  - 📌 Inflar y mostrar el diálogo en el ViewHolder
+  
+## 🛠️ Paso 5: Probar la app
 
+✔️ Haz un long click en un usuario.
+✔️ Selecciona Editar, cambia los valores y guarda.
+✔️ Verifica que el RecyclerView muestre los cambios.
+✔️ Haz un long click y selecciona Eliminar para borrarlo.
 
-🧩 Fragmento 1 – InicioFragment
-- Botón: "Nuevo pedido" en la cual va a navegar hacia SeleccionComidaFragment.
+🤔 Preguntas de reflexión
 
-🧩 Fragmento 2 – SeleccionComidaFragment
-- Selección de extras (bebida, papas, postre).
-- Al hacer clic en “Siguiente”: Se crea un Bundle con el tipo de comida seleccionado y se navega a SeleccionExtrasFragment.
+### ¿Qué diferencia hay entre notifyItemRemoved(), notifyItemInserted() y notifyItemChanged()?
 
-🧩 Fragmento 3 – SeleccionExtrasFragment
-- Selección de extras (bebida, papas, postre).
-- Al hacer click en "Siguiente": Se agrega la info de los extras al mismo Bundle o se crea uno nuevo con todo y se navega a ResumenPedidoFragment.
+- notifyItemRemoved() → Notifica que se eliminó un ítem en la lista.
 
-🧩 Fragmento 4 – ResumenPedidoFragment
-- Usa arguments?.getString(...), etc. para mostrar la comida y extras.
-- Tiene dos botones: “Confirmar pedido” en la cual muestra un Toast y vuelve al inicio (navigate()) y "Editar pedido” que usa setFragmentResult() con los datos actuales del pedido. Este llama a popBackStack() para regresar a SeleccionComidaFragment, que los puede recuperar con setFragmentResultListener(...).
+- notifyItemInserted() → Notifica que se insertó un nuevo ítem.
 
-📍 **Se debe usar:**
-- Paso de datos hacia adelante con navigate().
-- Uso de objeto Bundle para paso de datos.
-- Comunicación de regreso con setFragmentResult() + setFragmentResultListener().
-- Uso de popBackStack() para volver a otro fragmento.
-- Uso de Safe Args de manera opcional.
+- notifyItemChanged() → Notifica que un ítem existente cambió y debe actualizarse.
 
-🔗 [Ejercicio desarrollado](https://github.com/Joshua150453/Dispositivos-Moviles-Trabajos-/tree/main/Quinto%20Entregable/FragmentsyNavegacin)
+### ¿Por qué es necesario validar bindingAdapterPosition != RecyclerView.NO_POSITION?
+
+Porque si el ViewHolder ya no está en una posición válida, intentar modificarlo podría causar errores o inconsistencias.
+
+### ¿Qué ventajas tiene usar un diálogo frente a abrir una nueva pantalla para editar?
+
+Es más rápido, mantiene al usuario en el mismo contexto y evita navegar entre pantallas innecesariamente.
+
+🔗 [Ejercicio desarrollado](https://github.com/Joshua150453/Dispositivos-Moviles-Trabajos-/tree/main/Actividad%20en%20Clase_RecyclerView_Edicion_LongClick_ConDialogo/recyclerviewapp2)
