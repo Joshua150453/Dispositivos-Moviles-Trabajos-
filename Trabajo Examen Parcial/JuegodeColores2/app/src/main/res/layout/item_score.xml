@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Ítem individual del historial (usado por RecyclerView) -->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <!-- Puntaje obtenido -->
+    <TextView
+        android:id="@+id/tvScoreItem"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Puntaje: 0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Fecha y hora en que se logró el puntaje -->
+    <TextView
+        android:id="@+id/tvTimeItem"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="fecha"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvScoreItem"
+        app:layout_constraintEnd_toEndOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
