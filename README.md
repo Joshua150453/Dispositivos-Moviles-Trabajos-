@@ -9,7 +9,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr><td colspan="3"><span style="font-weight:bold;">Formato</span>: Trabajo Práctica 6</td></tr>
+        <tr><td colspan="3"><span style="font-weight:bold;">Formato</span>: Trabajo Examen Parcial</td></tr>
     </tbody>
 </table>
 
@@ -27,9 +27,9 @@
                 <td colspan="2">
                     <table>
                         <tr><td>ASIGNATURA:</td><td>Programción para Dispositivos Moviles</td></tr>
-                        <tr><td>TÍTULO DEL TRABAJO:</td><td> Clase_RecyclerView</td></tr>
+                        <tr><td>TÍTULO DEL TRABAJO:</td><td> Examen Parcial</td></tr>
                         <tr>
-                            <td>NÚMERO DEL TRABAJO:</td><td>06 - Práctica Clase</td>
+                            <td>NÚMERO DEL TRABAJO:</td><td>07 - Práctica Parcial</td>
                             <td>AÑO:</td><td>2025</td>
                             <td>NRO. SEMESTRE:</td><td>VI</td>
                         </tr>
@@ -58,80 +58,146 @@
     </table>
 </div>
 
-# Práctica Guiada: RecyclerView con Edición y Long Click
+# Examen Parcial: Juego de Colores
+Desarrolla una aplicación usando Kotlin y Android Studio. El juego pondrá a prueba tu capacidad de crear una app interactiva con múltiples fragments, navegación, gestión de estados del ciclo de vida, la interacción avanzada con RecyclerView, manejo de ventanas de diálogo, lógica condicional y elementos visuales.
 
-## Introducción teórica
-El **RecyclerView** es un componente avanzado que permite mostrar listas de datos de manera eficiente.  
-Cada elemento se representa mediante un **ViewHolder**, y el **Adapter** se encarga de enlazar los datos con las vistas.
+🔗 [Trabajo Examen Parcial](https://github.com/Joshua150453/Dispositivos-Moviles-Trabajos-/tree/main/Trabajo%20Examen%20Parcial)
 
----
+## 🎯 Objetivo:
+Crear un juego donde el usuario debe presionar el botón que coincida con el color que aparece en pantalla. El objetivo es obtener la mayor cantidad de aciertos en 30 segundos, mostrar el historial de puntajes en la sesión (sin usar Room/BD).
 
-## Introducción a los diálogos en Android
-En Android, un **diálogo** es una ventana emergente que aparece sobre la pantalla actual.  
-Se usa para mostrar mensajes importantes o pedir información sin cambiar de actividad.
+## 🧩 ¿Qué debe tener la aplicación?
+### 1. Fragmento de bienvenida (WelcomeFragment):
+  - Título del juego.
+  - Mensaje de bienvenida y reglas del juego (Mostrar en un AlertDialog)
+  - Botón “Iniciar juego” para comenzar.
+  - Interfaz libre pueden incluir imágenes.
+#### 🧠 Explicación:
+    - Muestra un AlertDialog con las reglas del juego → cumple el requisito "Mensaje de bienvenida y reglas del juego".
+    - Tiene un botón “Iniciar juego” que navega hacia el GameFragment → cumple "Botón para comenzar el juego".
+    - Usa ConstraintLayout con texto y posible imagen decorativa → cumple "Interfaz libre con imágenes".
+    
+### 2. Fragmento del juego (GameFragment):
+#### 🧠 Explicación:
+  - Usa un CountDownTimer → controla los 30 segundos del juego.
+  - Muestra el color actual y botones de respuesta → cumple los requisitos del cuadro y botones de colores.
+  - Cada acierto aumenta el puntaje y cambia el color.
+  - Cuando el tiempo termina, navega automáticamente al ResultFragment con el puntaje actual.
+  - Se usa animación en los botones y colores, por ejemplo:
+```Kotlin
+private fun animateSuccess() {
+        val anim = ObjectAnimator.ofFloat(binding.viewColorBox, "scaleX", 1f, 1.08f, 1f)
+        anim.duration = 200
+        anim.interpolator = DecelerateInterpolator()
+        anim.start()
+    }
+```
+### 3. Fragmento de resultados (ResultFragment):
+  - Muestra el puntaje final de la partida actual.
+  - Muestra el puntaje más alto histórico (Usar SharedPreferences).
+  - Contiene un RecyclerView para mostrar el Historial de Puntajes sin persintencia. Puede solo visualizar el historial de las partidas de la sesión.
+  - Botón para volver a jugar.
+#### 🧠 Explicación:
+    - Obtiene el puntaje actual mediante argumentos del GameFragment.
+    - Usa PrefsHelper (basado en SharedPreferences) para guardar el puntaje más alto histórico.
+    - Muestra un RecyclerView con los puntajes de la sesión actual (sin base de datos).
+    - Botón “Volver a jugar” → reinicia el flujo del juego.
 
-El más común es el **AlertDialog**, que puede mostrar:
-- Un título  
-- Un mensaje o layout personalizado  
-- Botones como *Aceptar* y *Cancelar*
+### 4. PrefsHelper:
+  - Manejar el almacenamiento básico del puntaje más alto con SharedPreferences.
 
-## 🔗 Relación con RecyclerView
+### 5. ScoreAdapter:
+  - Mostrar la lista de puntajes jugados durante la sesión en el RecyclerView del ResultFragment.
+  - Implementa RecyclerView funcional para el historial de puntajes.
 
-Al hacer long click en un elemento, se puede mostrar un menú de acciones (Editar o Eliminar).
+### 6. Navigation:
+  - Define el gráfico de navegación (nav_graph.xml), que indica cómo se mueven los fragments (Welcome → Game → Result).
 
-Para editar un usuario, usamos un AlertDialog con layout personalizado que contiene los campos Nombre, Edad y Correo.
+### 7. build.gradle.kts (Project: Juego_de_Colores)
+  - Configura versiones globales de dependencias y plugins (por ejemplo Kotlin, Navigation, Compose).
 
-## 📝 Paso 1: Ver videos de referencia
+### 8. build.gradle.kts (Module: app)
+Contiene las dependencias específicas del módulo:
+- AndroidX, Navigation, ViewModel, Animaciones, etc.
+- También configura el SDK y los plugins usados.
+- Se requiere hacer (Sync Proyect with Gradle Files) para verificar que todas la dependencias se carguen y luego se carga el juego
 
-  - RecyclerView básico
-  
-  - Long click en RecyclerView
-  
-  - AlertDialog en Android
+### 9. settings.gradle.kts
+- Indica qué módulos pertenecen al proyecto (en este caso solo :app) y de dónde se obtienen las dependencias (repositorios como MavenCentral o Google).
+- Se requiere hacer (Sync Proyect with Gradle Files) para verificar que todas la dependencias se carguen, y luego se carga el juego
 
-## 📝 Paso 2: Código base del proyecto
+## 🧩 Funcionalidades Adicionales (elige al menos una, es obligatoria):
+    - 🎨 Aplica animaciones a los botones o colores que aparecen: Esta funcionalidad está implementada dentro de tu archivo GameFragment.kt, específicamente en las funciones:
+```Kotlin
+  private fun animateSuccess() {
+        val anim = ObjectAnimator.ofFloat(binding.viewColorBox, "scaleX", 1f, 1.08f, 1f)
+        anim.duration = 200
+        anim.interpolator = DecelerateInterpolator()
+        anim.start()
+    }
 
-  - El profesor entregará un proyecto con:
-  
-  - Una lista de usuarios mostrada en un RecyclerView.
-  
-  - Funcionalidad de agregar y eliminar usuarios ya implementada.
-  
-  - Un UsuarioAdapter y un UsuarioViewHolder básicos.
+    // Animación al fallar (vibración lateral)
+    private fun animateFailure() {
+        lifecycleScope.launch {
+            val anim = ObjectAnimator.ofFloat(binding.viewColorBox, "translationX", 0f, 20f, -20f, 0f)
+            anim.duration = 300
+            anim.start()
+            delay(300)
+        }
+    }
+```
+   - Y se activan en los siguientes momentos dentro del método onColorPressed():
+```Kotlin
+  private fun onColorPressed(selectedName: String) {
+        val hit = selectedName == currentTarget.name
+        if (hit) {
+            viewModel.incrementScore() // Suma puntaje
+            animateSuccess() // Efecto visual
+            pickNewTarget()  // Cambia a otro color
+        } else {
+            animateFailure() // Animación de vibración
+        }
+    }
+```
+     - Cuando el jugador acierta, el cuadro del color (viewColorBox) aumenta ligeramente su tamaño horizontalmente y luego vuelve a su tamaño original.
+       Esto da un efecto visual de “rebote” o “éxito visual”.
+     - Si el usuario elige un color incorrecto, el cuadro de color “tiembla” de lado a lado, simulando una vibración de error.
+     
+## 🧪 ¿Qué se debe practicar?
+  - Navegación entre Fragments y paso de datos.
+  - Uso de temporizador (CountDownTimer).
+  - Interacción con el usuario a través de botones y feedback.
+  - Manejo de estados y lógica condicional básica.
+  - Diseño de UI con ConstraintLayout.
+  - Control de errores y validación del input del usuario.
+  - Organización del código y buenas prácticas de programación en Kotlin.
+  - Uso adecuado de recursos visuales (colores, imágenes, etc).
+  - Almacenamiento básico de datos usando SharedPreferences 
+  - Uso de AlertDialog.
+  - Almacenamiento de datos usando Room (si eliges esa funcionalidad adicional).
+  - Incorporación de medios como sonidos o animaciones opcionales (si eliges esa funcionalidad adicional).
 
-## 📝 Paso 3: Implementar long click
-
-Agrega un setOnLongClickListener al UsuarioViewHolder para abrir un menú con opciones:
-
-
-## 📝 Paso 4: Editar un usuario
-  - 📌 Layout personalizado dialog_edit_usuario.xml
-  
-  - 📌 Inflar y mostrar el diálogo en el ViewHolder
-  
-## 🛠️ Paso 5: Probar la app
-
-✔️ Haz un long click en un usuario.
-✔️ Selecciona Editar, cambia los valores y guarda.
-✔️ Verifica que el RecyclerView muestre los cambios.
-✔️ Haz un long click y selecciona Eliminar para borrarlo.
-
-🤔 Preguntas de reflexión
-
-### ¿Qué diferencia hay entre notifyItemRemoved(), notifyItemInserted() y notifyItemChanged()?
-
-- notifyItemRemoved() → Notifica que se eliminó un ítem en la lista.
-
-- notifyItemInserted() → Notifica que se insertó un nuevo ítem.
-
-- notifyItemChanged() → Notifica que un ítem existente cambió y debe actualizarse.
-
-### ¿Por qué es necesario validar bindingAdapterPosition != RecyclerView.NO_POSITION?
-
-Porque si el ViewHolder ya no está en una posición válida, intentar modificarlo podría causar errores o inconsistencias.
-
-### ¿Qué ventajas tiene usar un diálogo frente a abrir una nueva pantalla para editar?
-
-Es más rápido, mantiene al usuario en el mismo contexto y evita navegar entre pantallas innecesariamente.
-
-🔗 [Ejercicio desarrollado](https://github.com/Joshua150453/Dispositivos-Moviles-Trabajos-/tree/main/Actividad%20en%20Clase_RecyclerView_Edicion_LongClick_ConDialogo/recyclerviewapp2)
+## 🧠 Tips útiles:
+  - Usa recursos de cadenas en strings.xml.
+  - Usa recursos de colores en colors.xml.
+  - Usa una función para generar el color aleatorio.
+  - Para el temporizador, revisa la clase CountDownTimer.
+  - Para el puntaje más alto histórico, revisa SharedPreferences.
+  - Codigos como GameFragment, WelcomeFragment, etc. Y otras Similares se ubican en diferentes Carpetas para que el proyecto este organizado por capa:
+    ### 🧠 model/
+    Contiene las clases de datos (como Score), que representan la información del juego.
+    👉 Motivo: separar la lógica de los datos del resto de la app.
+    
+    ### 🎮 viewmodel/    
+    Guarda la lógica principal (GameViewModel), que controla el estado del juego.
+    👉 Motivo: sigue el patrón MVVM (Model–View–ViewModel), donde el ViewModel actúa como puente entre los datos (model) y la interfaz (ui).
+    
+    ### 🎨 ui/  
+    Contiene todo lo relacionado con la interfaz gráfica del usuario. 
+      - fragments/: pantallas o vistas del juego.   
+      - adapters/: adaptadores que conectan datos con vistas (por ejemplo, listas).
+    👉 Motivo: separar la presentación del comportamiento lógico.
+    
+    ### ⚙️ util/
+    Funciones o clases reutilizables en toda la app (por ejemplo, manejo de colores o preferencias).
+    👉 Motivo: evitar repetir código y centralizar funciones comunes.
